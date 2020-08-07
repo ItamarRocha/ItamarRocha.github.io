@@ -1,4 +1,4 @@
----
+<!-- ---
 layout: post
 title: Medway Student Allocation
 date: 2020-08-06
@@ -64,4 +64,4 @@ As in all project that depends on to many factors, although all the advisors had
 
 
 
-Some of the questions were also used for contraints purpose. The preference for the advisor being from the same sex, for example, resulted in a negative M in the compatibility matrix, therefore eliminating that possibility.
+Some of the questions were also used for contraints purpose. The preference for the advisor being from the same sex, for example, resulted in a negative M in the compatibility matrix, therefore eliminating that possibility. -->
