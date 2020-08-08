@@ -12,14 +12,14 @@ date: 2020-08-06
 </div>
 </center>
 
-[Medway João Pessoa](https://www.instagram.com/medwayjp/) is a preparatory course for ENEM (Brazilian SAT) and other tests (private universities). Medway has more than 200 students enrolled and counts with a system that's different from its competitors. The difference relies on the way the company treats its students. Medway has several workers that have experience with ENEM and are responsible for advising the students in their path. These employees are named *assessor* (some kind of Advisor/Organizer) who usually are students that have already passed the ENEM with high scores and are considered communicative.
+[Medway João Pessoa](https://www.instagram.com/medwayjp/) is a preparatory course for ENEM (Brazilian SAT) and other tests (private universities). Medway has more than 200 students enrolled and counts with a system that's different from its competitors. The difference relies on the way the company treats its students. Medway has several workers that have experience with ENEM and are responsible for advising the students in their studies and life. These employees are called *assessor* (some kind of Advisor/Organizer) who usually are students that have already passed the ENEM with high scores and are considered communicative.
 <hr>
 
 ### Problem Overview
 
 The problem here is that each advisor has normally 16 students with whom he must speak weekly, to know how they are doing on their studies, how were their grades on the simulations and how are they doing in general. However, these students are allocated without constraints. Therefore, some advisors get students that are not 100% compatible with them and that need more attention during the week. These two problems are responsible for difficulting the job and for burning out some of the advisors.
 
-With this scenario in mind, my main objective in this work was trying to make things more balanced, so the students and the advisors can enjoy their roles in the best way possible. Maximizing the total compatibility and letting the work balanced.
+With this scenario in mind, my main objective in this work was trying to make things more balanced, so the students and the advisors can enjoy their roles in the best way possible while having a maximized total compatibility.
 <hr>
 
 ### Tools Used
