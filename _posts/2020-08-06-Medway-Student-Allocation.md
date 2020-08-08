@@ -347,7 +347,7 @@ The fixed time and fixed students were done in order to overcome the limitations
 #### Decision variable
 The decision variable here is 
 
-$x_{i,j} \ \in \ \big \{0,1 \big \}$
+$x_{i,j} \ \in \ \{0,1\}$
 
 where x is a boolean 2D array that tells if a student(i) is allocated with an advisor(j) or not.
 
@@ -359,18 +359,18 @@ $$
 
 #### Constraints
 
-1. **Each student must have only one advisor**
+1. **Each student must have only one advisor**  
 $$
 \sum_{j \in A} x_{i,j} = 1 \ , \ \forall i \ \in S
 $$
 
-2. **(Limiting the number of students per advisor**
+2. **Limiting the number of students per advisor**  
 $$
 \sum_{i \in S} x_{i,j} + f_{j} = N \ , \forall j \ \in A
 $$
 * The ideal case would be that all the advisors have the same number of students. However, is not always possible since the division may not result in an integer. The solution is to set a small interval {N-1,N+1}.
 
-3. **Limiting the time spent by each advisor**
+3. **Limiting the time spent by each advisor**  
 $$
 \sum_{i \in S} x_{i,j}*w_i + t_j = T \ , \forall j \ \in A
 $$
