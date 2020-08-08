@@ -24,28 +24,28 @@ With this scenario in mind, my main objective in this work was trying to make th
 
 ### Tools Used
 
-During the project I have decided to use :
-* [CPLEX optimizer](https://www.ibm.com/analytics/cplex-optimizer) (C++) from IBM as the solver.
-* Python libraries such as Pandas and Numpy with the preprocessing part.
-* Google Forms to gather the data
+During the project I have decided to use:
+* [CPLEX optimizer](https://www.ibm.com/analytics/cplex-optimizer) (C++) from IBM as the mixed integer programming (MIP) solver.
+* Python libraries such as Pandas and Numpy for the preprocessing phase.
+* Google Forms to collect the data
 <hr>
 
 ### Data Production
 
-In order to do so, I thought of crafting some sort of compatibility metric. With the help of my bosses and some of the universities professors, I have made a Google forms with questions about different aspects of each student and each advisor life. Some of the information that was asked is listed below:
+In view of this, I thought of crafting some sort of compatibility metric. With the help of my bosses and some of the college professors, I have made a Google forms with questions about different aspects of each student and each advisor life. Some of the information that was asked is listed below:
 
 * Age
 * Gender
-* Degree that intends to pursuit
+* Degree that he/she intends to pursuit
 * Organization Level
 * Religion
 * Extrovertion level
 * Sensibility level
 * Prefered subject
-* Political vision
+* Political views
 * and many others...
 
-The may concern in asking so many questions from different life aspects was to make a good compatibility modeling.
+The main concern in asking so many questions from different life aspects was to make a good compatibility modeling.
 
 After deciding the questions, I have sent the Google Forms link for all the 250+ students and all the 18 advisors. After that I made another document where I asked each advisor to write how much time they used to spend with each of their students in the following scale (In minutes):
 <center>
@@ -71,7 +71,7 @@ After deciding the questions, I have sent the Google Forms link for all the 250+
   </div>
 </center>
 
-As in all project that depends on to many factors, although all the advisors had responded, I ended up with 170 student responses and (at least) all the advisors responses.
+As in all project that depends on too many factors, although all the advisors had responded, I ended up with 170 student responses.
 <hr>
 
 ### Preprocessing
@@ -296,7 +296,7 @@ The result was the following table:
 * $S \ \rightarrow$ Students
 * $A \ \rightarrow$ Advisors
 
-#### Variables
+#### Data
 * $c_{i,j} \ \rightarrow$ Compatibility of student(i) and advisor(j)
 * $w_{i} \ \rightarrow$ Weight of time spent by student i.
 * $f_{j} \ \rightarrow$ Fixed Students
@@ -308,7 +308,7 @@ The fixed time and fixed students were done in order to overcome the limitations
 * $N \ \rightarrow$ The average number of students per advisor. 
 * $T \ \rightarrow$ The average time that each advisor spents with all its students during the week.
 
-#### Decision variable
+#### Decision variables
 The decision variable here is 
 
 $x_{i,j} \ \in \ \{0,1\}$
@@ -319,7 +319,7 @@ where x is a boolean 2D array that tells if a student(i) is allocated with an ad
 Our goal is to maximize the total compatibility. With that said, our objective function is:  
   
 $$
-\sum_{i \in S} \sum_{j \in A} x_{i,j} * c_{i,j}
+\sum_{i \in S} \sum_{j \in A} c_{i,j} x_{i,j}
 $$
 
 #### Constraints
@@ -333,7 +333,7 @@ $$
 2. **Limiting the number of students per advisor**  
   
 $$
-\sum_{i \in S} x_{i,j} + f_{j} = N \ , \forall j \ \in A
+f_{j} + \sum_{i \in S} x_{i,j} = N \ , \forall j \ \in A
 $$
   
 * The ideal case would be that all the advisors have the same number of students. However, is not always possible since the division may not result in an integer. The solution is to set a small interval {N-1,N+1}.
@@ -341,10 +341,10 @@ $$
 3. **Limiting the time spent by each advisor**  
   
 $$
-\sum_{i \in S} x_{i,j}*w_i + t_j = T \ , \forall j \ \in A
+t_j + \sum_{i \in S} w_i x_{i,j} = T \ , \forall j \ \in A
 $$
   
-* Just like the previous constraint, we also may have to change this constraint to two different ones, bounding it to an interval.
+* Just like the previous constraint, we may also have to change this constraint to two different ones, bounding it to an interval.
 <hr>
 ### Results and Comparisons
 Using the model that I have made led to an optimal solution to the problem. Apart from having the maximum compatibility possible (using the metric previously presented), the problem also tackled 
@@ -352,7 +352,7 @@ the imbalancements in the previous allocation.
 
 The average time is 60 (in the scale of time mentioned in data production). However, before using the model, the standard deviation of each advisors time was 11.65, which was reduced to 0.8 . In addition, the number of students for each advisor standard deviation was 1.18 and ended up being 0.5.
 
-In resume, the modeling was able to distribute the students maximizing the compatibility and balancing the job for each advisor, since they all get paid the same.
+In summary, the modeling was able to distribute the students maximizing the compatibility and balancing the job for each advisor, since they all get paid the same.
 
 > The optimization code can be found [here](https://github.com/ItamarRocha/Operations-Research/tree/master/projects/medway)
 <hr>
@@ -369,6 +369,6 @@ As future works:
 * Create a prediction of the time spent by the new students based on interview informations.
 <hr>
 
-### Questions and doubts
+### Questions?
 
-Any further questions you can reach me out on any social media at the end of the page.
+You can reach me out on any social media at the end of the page.
