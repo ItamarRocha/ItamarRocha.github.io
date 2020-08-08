@@ -363,7 +363,7 @@ Improvements:
 * Gather the data from all students.
 * Test other compatibility metrics.
 
-As future works:
+Future works:
 
 * Develop a software to do the allocation automatically.
 * Create a prediction of the time spent by the new students based on interview informations.
