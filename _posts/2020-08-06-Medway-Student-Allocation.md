@@ -359,18 +359,18 @@ $$
 
 #### Constraints
 
-##### Each student must have only one advisor
+1. <h5>Each student must have only one advisor</h5>
 $$
 \sum_{j \in A} x_{i,j} = 1 \ , \ \forall i \ \in S
 $$
 
-##### Limiting the number of students per advisor
+2. <h5>Limiting the number of students per advisor</h5>
 $$
 \sum_{i \in S} x_{i,j} + f_{j} = N \ , \forall j \ \in A
 $$
 * The ideal case would be that all the advisors have the same number of students. However, is not always possible since the division may not result in an integer. The solution is to set a small interval {N-1,N+1}.
 
-##### Limiting the time spent by each advisor
+3. <h5>Limiting the time spent by each advisor</h5>
 $$
 \sum_{i \in S} x_{i,j}*w_i + t_j = T \ , \forall j \ \in A
 $$
