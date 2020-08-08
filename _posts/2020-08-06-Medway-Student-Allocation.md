@@ -13,13 +13,14 @@ date: 2020-08-06
 </center>
 
 [Medway João Pessoa](https://www.instagram.com/medwayjp/) is a preparatory course for ENEM (Brazilian SAT) and other tests (private universities). Medway has more than 200 students enrolled and counts with a system that's different from its competitors. The difference relies on the way the company treats its students. Medway has several workers that have experience with ENEM and are responsible for advising the students in their path. These employees are named *assessor* (some kind of Advisor/Organizer) who usually are students that have already passed the ENEM with high scores and are considered communicative.
+<hr>
 
 ### Problem Overview
 
 The problem here is that each advisor has normally 16 students with whom he must speak weekly, to know how they are doing on their studies, how were their grades on the simulations and how are they doing in general. However, these students are allocated without constraints. Therefore, some advisors get students that are not 100% compatible with them and that need more attention during the week. These two problems are responsible for difficulting the job and for burning out some of the advisors.
 
 With this scenario in mind, my main objective in this work was trying to make things more balanced, so the students and the advisors can enjoy their roles in the best way possible. Maximizing the total compatibility and letting the work balanced.
-
+<hr>
 
 ### Tools Used
 
@@ -27,6 +28,8 @@ During the project I have decided to use :
 * [CPLEX optimizer](https://www.ibm.com/analytics/cplex-optimizer) (C++) from IBM as the solver.
 * Python libraries such as Pandas and Numpy with the preprocessing part.
 * Google Forms to gather the data
+<hr>
+
 ### Data Production
 
 In order to do so, I thought of crafting some sort of compatibility metric. With the help of my bosses and some of the universities professors, I have made a Google forms with questions about different aspects of each student and each advisor life. Some of the information that was asked is listed below:
@@ -69,7 +72,7 @@ After deciding the questions, I have sent the Google Forms link for all the 250+
 </center>
 
 As in all project that depends on to many factors, although all the advisors had responded, I ended up with 170 student responses and (at least) all the advisors responses.
-
+<hr>
 
 ### Preprocessing
 
@@ -322,6 +325,7 @@ The result was the following table:
 
 > The names and the preprocessing scripts were omitted, since the information gathered in this project is private and was not authorized to be published.
 
+ <hr>
 
 ### Modeling
 #### Sets
@@ -371,7 +375,7 @@ $$
 \sum_{i \in S} x_{i,j}*w_i + t_j = T \ , \forall j \ \in A
 $$
 * Just like the previous constraint, we also may have to change this constraint to two different ones, bounding it to an interval.
-
+<hr>
 ### Results and Comparisons
 Using the model that I have made led to an optimal solution to the problem. Apart from having the maximum compatibility possible (using the metric previously presented), the problem also tackled 
 the imbalancements in the previous allocation.
@@ -380,7 +384,8 @@ The average time is 60 (in the scale of time mentioned in data production). Howe
 
 In resume, the modeling was able to distribute the students maximizing the compatibility and balancing the job for each advisor, since they all get paid the same.
 
-> The optimization code can be found at [here](https://github.com/ItamarRocha/Operations-Research/tree/master/projects/medway)
+> The optimization code can be found [here](https://github.com/ItamarRocha/Operations-Research/tree/master/projects/medway)
+<hr>
 
 ### Improvements and Future Works
 
@@ -391,7 +396,8 @@ Improvements:
 As future works:
 
 * Develop a software to do the allocation automatically.
-* Create a prediction of the time spent by the new students based on some informations.
+* Create a prediction of the time spent by the new students based on interview informations.
+<hr>
 
 ### Questions and doubts
 
