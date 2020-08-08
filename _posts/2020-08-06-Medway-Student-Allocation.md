@@ -87,15 +87,15 @@ The result was the following table:
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
+        vertical-align: center;
     }
 
     .dataframe tbody tr th {
-        vertical-align: top;
+        vertical-align: center;
     }
 
     .dataframe thead th {
-        text-align: right;
+        text-align: center;
     }
 </style>
 <table class="dataframe" border="1">
@@ -351,7 +351,7 @@ $x_{i,j} \ \in \ \{0,1\}$
 
 where x is a boolean 2D array that tells if a student(i) is allocated with an advisor(j) or not.
 
-#### Objective Function
+#### Objective Function  
 Our goal is to maximize the total compatibility. With that said, our objective function is:
 $$
 \sum_{i \in S} \sum_{j \in A} x_{i,j} * c_{i,j}
