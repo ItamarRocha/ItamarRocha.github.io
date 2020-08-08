@@ -113,10 +113,7 @@ The result was the following table:
       <th>A8</th>
       <th>A9</th>
       <th>A10</th>
-      <th>A11</th>
-      <th>A12</th>
-      <th>A13</th>
-      <th>A14</th>
+      <th>...</th>
     </tr>
   </thead>
   <tbody>
@@ -133,10 +130,7 @@ The result was the following table:
       <td>-10000</td>
       <td>16</td>
       <td>-10000</td>
-      <td>13</td>
-      <td>13</td>
-      <td>-10000</td>
-      <td>10</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>S1</th>
@@ -151,10 +145,7 @@ The result was the following table:
       <td>16</td>
       <td>15</td>
       <td>14</td>
-      <td>14</td>
-      <td>13</td>
-      <td>12</td>
-      <td>11</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>S2</th>
@@ -169,10 +160,7 @@ The result was the following table:
       <td>-10000</td>
       <td>20</td>
       <td>-10000</td>
-      <td>-10000</td>
-      <td>15</td>
-      <td>-10000</td>
-      <td>-10000</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>S3</th>
@@ -187,10 +175,7 @@ The result was the following table:
       <td>17</td>
       <td>-10000</td>
       <td>-10000</td>
-      <td>-10000</td>
-      <td>15</td>
-      <td>11</td>
-      <td>-10000</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>S4</th>
@@ -205,16 +190,10 @@ The result was the following table:
       <td>15</td>
       <td>13</td>
       <td>10</td>
-      <td>12</td>
-      <td>12</td>
-      <td>11</td>
-      <td>11</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -241,10 +220,7 @@ The result was the following table:
       <td>11</td>
       <td>13</td>
       <td>11</td>
-      <td>12</td>
-      <td>14</td>
-      <td>12</td>
-      <td>8</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>S153</th>
@@ -259,10 +235,7 @@ The result was the following table:
       <td>11</td>
       <td>12</td>
       <td>11</td>
-      <td>12</td>
-      <td>11</td>
-      <td>10</td>
-      <td>11</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>S154</th>
@@ -277,10 +250,7 @@ The result was the following table:
       <td>17</td>
       <td>13</td>
       <td>15</td>
-      <td>11</td>
-      <td>13</td>
-      <td>12</td>
-      <td>13</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>S155</th>
@@ -295,10 +265,7 @@ The result was the following table:
       <td>-10000</td>
       <td>13</td>
       <td>-10000</td>
-      <td>13</td>
-      <td>13</td>
-      <td>-10000</td>
-      <td>12</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>S156</th>
@@ -313,10 +280,7 @@ The result was the following table:
       <td>10</td>
       <td>10</td>
       <td>12</td>
-      <td>12</td>
-      <td>11</td>
-      <td>9</td>
-      <td>8</td>
+      <td>...</td>
     </tr>
   </tbody>
 </table>
@@ -352,7 +316,8 @@ $x_{i,j} \ \in \ \{0,1\}$
 where x is a boolean 2D array that tells if a student(i) is allocated with an advisor(j) or not.
 
 #### Objective Function  
-Our goal is to maximize the total compatibility. With that said, our objective function is:
+Our goal is to maximize the total compatibility. With that said, our objective function is:  
+  
 $$
 \sum_{i \in S} \sum_{j \in A} x_{i,j} * c_{i,j}
 $$
@@ -360,20 +325,25 @@ $$
 #### Constraints
 
 1. **Each student must have only one advisor**  
+  
 $$
 \sum_{j \in A} x_{i,j} = 1 \ , \ \forall i \ \in S
 $$
 
 2. **Limiting the number of students per advisor**  
+  
 $$
 \sum_{i \in S} x_{i,j} + f_{j} = N \ , \forall j \ \in A
 $$
+  
 * The ideal case would be that all the advisors have the same number of students. However, is not always possible since the division may not result in an integer. The solution is to set a small interval {N-1,N+1}.
 
 3. **Limiting the time spent by each advisor**  
+  
 $$
 \sum_{i \in S} x_{i,j}*w_i + t_j = T \ , \forall j \ \in A
 $$
+  
 * Just like the previous constraint, we also may have to change this constraint to two different ones, bounding it to an interval.
 <hr>
 ### Results and Comparisons
