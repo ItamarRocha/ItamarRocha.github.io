@@ -17,7 +17,7 @@ date: 2020-08-06
 
 ### Problem Overview
 
-The problem here is that each advisor has normally 16 students with whom he must speak weekly, to know how they are doing on their studies, how were their grades on the mock tests and how are they doing in general. However, these students are allocated without constraints. Therefore, some advisors get students that are not 100% compatible with them and that need more attention during the week. These two problems are responsible for difficulting the job and for burning out some of the advisors.
+The problem here is that each advisor has normally 16 students with whom he must speak weekly, to know how they are doing on their studies, how were their grades on the mock tests, and how are they doing in general. However, these students are allocated without constraints. Therefore, some advisors get students that are not 100% compatible with them, and that need more attention during the week. These two problems are responsible for difficulting the job and for burning out some of the advisors.
 
 With this scenario in mind, my main objective in this work was trying to make things more balanced, so the students and the advisors can enjoy their roles in the best way possible while having a maximized total compatibility.
 <hr>
@@ -32,7 +32,7 @@ During the project I have decided to use:
 
 ### Data Production
 
-In view of this, I thought of crafting some sort of compatibility metric. With the help of my bosses and some of the college professors, I have made a Google forms with questions about different aspects of each student and each advisor life. Some of the information that was asked is listed below:
+In view of this, I thought of crafting some sort of compatibility metric. With the help of my bosses and some of the college professors, I have made a Google forms with questions about different aspects of each student and each advisor's life. Some of the information that was asked is listed below:
 
 * Age
 * Gender
@@ -76,7 +76,7 @@ As in all project that depends on too many factors, although all the advisors ha
 
 ### Preprocessing
 
-To compute the compatibility matrix, as the main objective of this project is to model the problem matematically and allocate the students, I choosed a simple correlation function. The matrix consists in a $i \ x \ j$ matrix, where i is the number of students and j is the number of advisors.
+To compute the compatibility matrix, as the main objective of this project is to model the problem matematically and allocate the students, I chose a simple correlation function. The matrix consists of a $i \ x \ j$ matrix, where i is the number of students and j is the number of advisors.
 
 For each question with equal responses it was computed +1 in the pair [student,advisor].
 
@@ -287,7 +287,7 @@ The result was the following table:
 <p>157 rows × 15 columns</p>
 </div>
 
-> The names and the preprocessing scripts were omitted, since the information gathered in this project is private and was not authorized to be published.
+> The names and the preprocessing scripts were omitted since the information gathered in this project is private and was not authorized to be published.
 
  <hr>
 
@@ -302,7 +302,7 @@ The result was the following table:
 * $f_{j} \ \rightarrow$ Fixed Students
 * $t_{j} \ \rightarrow$ Fixed Weight of Time of advisor j.
 
-The fixed time and fixed students were done in order to overcome the limitations proportioned by the lack of responses by some students. I choosed to maintain the students that didn't responde the survey as fixed with their advisors. With that said, the advisor already starts this allocation process with $f_{j}$ students and $t_{j}$ time.
+The fixed time and fixed students were done in order to overcome the limitations proportioned by the lack of responses by some students. I chose to maintain the students that didn't respond to the survey as fixed with their advisors. With that said, the advisor already starts this allocation process with $f_{j}$ students and $t_{j}$ time.
 
 #### Constants
 * $N \ \rightarrow$ The average number of students per advisor. 
@@ -348,11 +348,11 @@ $$
 <hr>
 ### Results and Comparisons
 Using the model that I have made led to an optimal solution to the problem. Apart from having the maximum compatibility possible (using the metric previously presented), the problem also tackled 
-the imbalancements in the previous allocation.
+the imbalances in the previous allocation.
 
-The average time is 60 (in the scale of time mentioned in data production). However, before using the model, the standard deviation of each advisors time was 11.65, which was reduced to 0.8 . In addition, the number of students for each advisor standard deviation was 1.18 and ended up being 0.5.
+The average time is 60 (in the scale of time mentioned in data production). However, before using the model, the standard deviation of each advisor's time was 11.65, which was reduced to 0.8. In addition, the number of students for each advisor's standard deviation was 1.18 and ended up being 0.5.
 
-In summary, the modeling was able to distribute the students maximizing the compatibility and balancing the job for each advisor, since they all get paid the same.
+In summary, the modeling was able to distribute the students to maximizing the compatibility and balancing the job for each advisor, since they all get paid the same.
 
 > The optimization code can be found [here](https://github.com/ItamarRocha/Operations-Research/tree/master/projects/medway)
 <hr>
