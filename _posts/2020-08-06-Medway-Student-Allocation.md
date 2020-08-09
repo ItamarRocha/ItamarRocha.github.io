@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Medway Student Allocation
-date: 2020-08-06
+date: 2020-08-08
 ---
 
 ### What is medway?
