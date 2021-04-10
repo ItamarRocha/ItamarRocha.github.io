@@ -44,7 +44,9 @@ The code can be found at [the GitHub repository](https://github.com/romulokps/ap
 
 ### Results
 
-See for yourself, have a look at the [application](https://mysterious-chamber-69490.herokuapp.com/) and try to find the cities with vacancies nearer to yours. 
+The project is no longer working, since the govern has ended the program. You can see a preview of how it was by watching the video below.
+
+[![](http://img.youtube.com/vi/IoWE-PGk1Q0/0.jpg)](http://www.youtube.com/watch?v=IoWE-PGk1Q0 "Helper ApoiaSus")
 
 ### Questions?
 
