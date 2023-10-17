@@ -197,19 +197,23 @@
 		margin: 0 0 6em 0;
 	}
 
-		header.major h2 {
-			font-size: 3em;
-		}
+	header.major_publications {
+		margin: 0 0 0 0;
+	}
 
-		header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
-			display: inline-block;
-			margin: 0 0 0.8em;
-		}
+	header.major h2 {
+		font-size: 3em;
+	}
 
-		header.major p {
-			font-size: 1.7em;
-			margin-bottom: 0;
-		}
+	header.major h2, header.major h3, header.major h4, header.major h5, header.major h6 {
+		display: inline-block;
+		margin: 0 0 0.8em;
+	}
+
+	header.major p {
+		font-size: 1.7em;
+		margin-bottom: 0;
+	}
 
 /* Form */
 
