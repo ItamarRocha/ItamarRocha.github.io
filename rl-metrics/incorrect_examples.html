@@ -66,6 +66,7 @@ td.id {
           <th>Question</th>
           <th>Dataset Answer</th>
           <th>LLM Answer</th>
+          <th>Parsed LLM Code Answer</th>
           <th>Explanation</th>
         </tr>
       </thead>
@@ -90,6 +91,7 @@ In 30 days, they eat 30 * 5 = &lt;&lt;30*5=150&gt;&gt;150 apples.
     result = total_apples_in_30_days
 
     return result</code></pre></td>
+      <td><pre><code>[240, &#x27;240&#x27;]</code></pre></td>
       <td><pre><code>Question: both eat 4/day. Dataset uses &#x27;4+1&#x27; (5/day) leading to 150. Correct is 4+4=8/day → 8*30=240.</code></pre></td>
     </tr>
     
@@ -113,6 +115,7 @@ So, 12 - 9 = &lt;&lt;12-9=3&gt;&gt;3 groups more are needed to form.
     result = int(additional_groups_needed)
 
     return result</code></pre></td>
+      <td><pre><code>[6, &#x27;6&#x27;]</code></pre></td>
       <td><pre><code>54 students into 6 groups means 6 groups are formed (not 9). Dataset treats 54/6 as &#x27;groups&#x27; instead of &#x27;students per group&#x27;. Correct more needed: 12-6=6 (not 3).</code></pre></td>
     </tr>
     
@@ -140,6 +143,7 @@ Sasha scored 10+4=&lt;&lt;10+4=14&gt;&gt;14 points in the two games.
     result = total_sasha_points
 
     return result</code></pre></td>
+      <td><pre><code>[18, &#x27;18&#x27;]</code></pre></td>
       <td><pre><code>Sasha totals 14 (game 1) + (Julie-first 10 − 6) = 18. Dataset sums 10 + 4 = 14, mistakenly ignoring Sasha&#x27;s first-game 14.</code></pre></td>
     </tr>
     
@@ -174,6 +178,7 @@ That means it will take 300,000/50,000=&lt;&lt;300000/50000=6&gt;&gt;6 years
     result = int(years_to_recover)
 
     return result</code></pre></td>
+      <td><pre><code>[6, &#x27;6&#x27;]</code></pre></td>
       <td><pre><code>Worked steps conclude 6 years, but final line says &#x27;#### 4&#x27;. Internal inconsistency in dataset&#x27;s final box.</code></pre></td>
     </tr>
     
@@ -203,6 +208,7 @@ He lost an average of $3 per race because 9 / 3 = &lt;&lt;9/3=3&gt;&gt;3
     result = int(average_loss_per_race)
 
     return result</code></pre></td>
+      <td><pre><code>[3, &#x27;3&#x27;]</code></pre></td>
       <td><pre><code>Third loss should be 1.5×(second win = 11) = 16.5, not 15. Dataset arithmetic and net/average are inconsistent.</code></pre></td>
     </tr>
     
@@ -232,6 +238,7 @@ They raise 750+430+400+700=&lt;&lt;750+430+400+700=2280&gt;&gt;2280 dollars.
     result = total_raised
 
     return result</code></pre></td>
+      <td><pre><code>[2180, &#x27;2180&#x27;]</code></pre></td>
       <td><pre><code>Totals should be (430 + 320) + (300 + 400) = 2180. Dataset double-counts 400, reporting 2280.</code></pre></td>
     </tr>
     

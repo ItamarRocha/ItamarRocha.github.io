@@ -5,6 +5,21 @@ comments: true
 <h5><strong>{{ page.title }}</strong></h5>
 <p class="meta">{{ page.date | date_to_string }}</p>
 
+{% if page.external_url %}
+<div class="major special">
+  <p>This article is hosted externally.</p>
+  <p>
+    <a class="button special small" href="{{ page.external_url }}" target="_blank" rel="noopener">
+      Read on {{ page.source | default: "Medium" }} ↗
+    </a>
+  </p>
+  {% if page.excerpt %}
+    <p>{{ page.excerpt }}</p>
+  {% endif %}
+  <hr>
+</div>
+{% endif %}
+
 <div class="major special">
   {{ content }}
 </div>

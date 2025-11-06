@@ -2,10 +2,39 @@
 layout: default
 title: Blog
 ---
-    <h5>{{ page.title }}</h5>
-    <ul class="posts">
+    <section class="wrapper">
+        <header class="major special">
+            <h2>Blog</h2>
+            <p>Writing, project updates, and notes</p>
+        </header>
 
-      {% for post in site.posts %}
-        <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-      {% endfor %}
-    </ul>
+        <div>
+            {% for post in site.posts %}
+                <div class="feature">
+                    <h4>
+                        {% if post.external_url %}
+                            <a href="{{ post.external_url }}" target="_blank" rel="noopener">{{ post.title }} ↗</a>
+                        {% else %}
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        {% endif %}
+                    </h4>
+                    <p><small>{{ post.date | date: "%b %d, %Y" }}</small></p>
+                    <p>
+                        {% if post.excerpt %}
+                            {{ post.excerpt | strip_html | truncate: 200 }}
+                        {% else %}
+                            {{ post.content | strip_html | truncate: 200 }}
+                        {% endif %}
+                    </p>
+                    <p>
+                        {% if post.external_url %}
+                            <a href="{{ post.external_url }}" class="button small" target="_blank" rel="noopener">Read on {{ post.source | default: "Medium" }}</a>
+                        {% else %}
+                            <a href="{{ post.url }}" class="button small">Read more</a>
+                        {% endif %}
+                    </p>
+                </div>
+                <hr>
+            {% endfor %}
+        </div>
+    </section>
