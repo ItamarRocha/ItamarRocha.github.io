@@ -113,10 +113,34 @@
 		/* fine-tune: nudge text slightly into the gutter to sit closer to the photo */
 		margin-left: 0;
 	}
+	/* On wider screens, pull text a bit left to reduce the gap to the image */
+	@media screen and (min-width: 981px) {
+		.about-text {
+			margin-left: -0.10em;
+		}
+	}
 	/* Set font size for About section paragraphs */
 	.about-text p,
 	.about-continue p {
 		font-size: 15px;
+	}
+	/* Home page: standardize base text size (exclude headings) */
+	body.landing #about p,
+	body.landing #home-research p,
+	body.landing #news p,
+	body.landing #research p,
+	body.landing [id="Extra-curricular and Volunteering"] p {
+		font-size: 15px;
+	}
+	/* Home page components that use divs for textual content */
+	body.landing #news .news-text {
+		font-size: 15px;
+	}
+	/* Home page: specific titles at 20px */
+	body.landing #home-research h4,
+	body.landing #research .fellowships-list h4,
+	body.landing [id="Extra-curricular and Volunteering"] h4 {
+		font-size: 20px;
 	}
 	
 	/* Tighten spacing around the News title */
@@ -179,9 +203,8 @@
 	/* Add extra space between the bottom divider and the first paragraph in the section */
 	#research hr.title-divider + p { margin-top: 1.5em; }
 
-	/* Featured page: minimal space between site header and Featured title,
-	   and small space before the divider below */
-	#featured .major.special { margin: 0.5em 0 0.3em 0; }
+	/* Featured page: match Research page spacing (no extra top margin on title) */
+	#featured .major.special { margin: 0 0 0.3em 0; }
 	/* Featured page: reduce spacing for both dividers around section titles */
 	#featured hr.title-divider { margin: 0.3em auto; }
 	/* Featured/EXTRA titles centered between dividers */
@@ -190,13 +213,53 @@
 	/* Featured page: tighten spacing between titles and text */
 	#featured h4 { margin: 0 0 0.25em 0; }
 	#featured h4 + p { margin-top: 0.15em !important; }
-	#featured p { margin: 0 0 0.7em 0; }
+	#featured p { margin: 0 0 0.7em 0; font-size: 15px; }
 	/* Featured page: add space between title and subtitle (override global negative margin) */
 	#featured .major.special h2 + p { margin-top: 0.8em !important; }
+	/* Featured page project/item titles at 20px (h4 only, exclude h2 section titles) */
+	#featured h4 { font-size: 20px; }
 
 	h3 {
 		font-size: 1.35em;
 		line-height: 1.5em;
+	}
+
+	/* ===============================================
+	   Home page: standardize horizontal content width
+	   Match the research section content width (1000px)
+	   Ensures all text/images align with dividers
+	   =============================================== */
+	body.landing #about .container,
+	body.landing #home-research .container,
+	body.landing #news .container,
+	body.landing #featured .container,
+	body.landing #research .container,
+	body.landing [id="Extra-curricular and Volunteering"] .container {
+		max-width: 1000px !important;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	/* Dividers fill the standardized content width */
+	body.landing hr.title-divider {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	/* Ensure images never exceed content width */
+	body.landing .image.fit img {
+		max-width: 200%;
+		height: auto;
+	}
+	/* Prevent long text (e.g., links) from overflowing the content width */
+	body.landing p, 
+	body.landing li, 
+	body.landing .news-text {
+		overflow-wrap: anywhere;
+		word-break: break-word;
 	}
 
 	h4 {
@@ -1317,6 +1380,13 @@ header.major h6 {
 .research-page #publications h4 { margin: 0 0 0.25em 0; }
 .research-page #publications p { margin: 0 0 0.8em 0; }
 
+/* Research page: base text size to 15px (paragraphs only) */
+.research-page #harvard-research p,
+.research-page #publications p { font-size: 15px; }
+
+/* Research page: h4 titles at 20px (requested list) */
+.research-page #harvard-research h4,
+.research-page #publications h4 { font-size: 20px; }
 /* Blog page: bring title closer to header and tighten divider spacing */
 #blog.wrapper { padding-top: 0.2em; }
 #blog .major.special { margin: 0; text-align: center; }
