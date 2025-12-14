@@ -1,0 +1,138 @@
+---
+title: blog
+---
+<!DOCTYPE HTML>
+<!--
+    Spatial by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+    <head>
+        <title>blog</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/skel.min.js"></script>
+        <script src="js/skel-layers.min.js"></script>
+        <script src="js/init.js"></script>
+
+        <!-- MathJax options -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174649418-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-174649418-1');
+        </script>
+
+        <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <noscript>
+            <link rel="stylesheet" href="css/skel.css" />
+            <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="css/style-xlarge.css" />
+        </noscript>
+    </head>
+    <body class="landing">
+
+        <!-- Header -->
+            <header id="header" class="alt">
+            <h1><strong><a href="https://www.harvard.edu/" target="_blank">Harvard</a></strong> CSE MS<br>
+          </h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/featured.html">EXTRA</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/blog.html">blog</a></li>
+                        <li><a href="/docs/Itamar_resume.pdf" target="_blank">Resume</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        <!-- Banner (compact) -->
+            <section id="banner" style="padding: 1.5em 0 1em 0;">
+                <h2>Itamar Rocha Filho</h2>
+                <!-- <p>Machine Learning and Software Engineering</p> -->
+            </section>
+
+        <!-- BLOG -->
+            <section id="blog" class="wrapper">
+                <div class="container" style="max-width: 1000px; line-height: 160%;">
+                    <hr class="title-divider">
+                    <header class="major special">
+                        <h2>blog</h2>
+                    </header>
+                    <hr class="title-divider">
+                    {% for post in site.posts %}
+                    <div class="blog-item" style="margin: 0 0 2.5em 0;">
+                        <h4 style="text-transform: uppercase;">{{ post.title }}</h4>
+                        <p>{{ post.date | date: "%b %d, %Y" }}</p>
+                        <p>{{ post.excerpt | strip_html | strip_newlines }}</p>
+                        <p><a href="{{ post.url }}" class="button small">Read more</a></p>
+                        <hr class="title-divider">
+                    </div>
+                    {% endfor %}
+
+                    <!-- Static external entries -->
+                    <div class="blog-item" style="margin: 0 0 2.5em 0;">
+                        <h4 style="text-transform: uppercase;">When Agents Prefer Hacking To Failure: Evaluating Misalignment Under Pressure</h4>
+                        <p>External links:</p>
+                        <p>
+                            <a href="https://www.lesswrong.com/posts/AJANBeJb2p39su6F9/cs2881r-week-8-when-agents-prefer-hacking-to-failure" target="_blank" rel="noopener">LessWrong post</a> ·
+                            <a href="https://github.com/ItamarRocha/scheming-exp8" target="_blank" rel="noopener">GitHub</a> ·
+                            <a href="https://boazbk.github.io/mltheoryseminar/" target="_blank" rel="noopener">Course page</a>
+                        </p>
+                        <p><a href="https://www.lesswrong.com/posts/AJANBeJb2p39su6F9/cs2881r-week-8-when-agents-prefer-hacking-to-failure" class="button small" target="_blank" rel="noopener">Read more</a></p>
+                        <hr class="title-divider">
+                    </div>
+
+                    <div class="blog-item" style="margin: 0 0 2.5em 0;">
+                        <h4 style="text-transform: uppercase;">Capy Running Coach</h4>
+                        <p>
+                            <a href="https://medium.com/institute-for-applied-computational-science/capy-running-coach-using-llms-rags-and-whatsapp-to-create-the-ideal-running-coach-f418300717bb" target="_blank" rel="noopener">Medium write-up</a>
+                        </p>
+                        <p><a href="https://medium.com/institute-for-applied-computational-science/capy-running-coach-using-llms-rags-and-whatsapp-to-create-the-ideal-running-coach-f418300717bb" class="button small" target="_blank" rel="noopener">Read more</a></p>
+                        <hr class="title-divider">
+                    </div>
+                </div>
+            </section>
+
+        <!-- Footer -->
+            <footer id="footer">
+                <div class="container">
+                    <hr class="title-divider">
+                    <ul class="icons">
+                        <li><a href="mailto:itamardprf@gmail.com" class="icon fa-envelope"></a></li>
+                        <li><a href="https://instagram.com/itamarprf/" class="icon fa-instagram"></a></li>
+                        <li><a href="https://github.com/ItamarRocha" class="icon fa-github"></a></li>
+                        <li><a href="https://www.linkedin.com/in/itamarrocha" class="icon fa-linkedin"></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>Copyright &copy; Itamar Rocha Filho</li>
+                        <li> HTML5</li>
+                        <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+                    </ul>
+                </div>
+            </footer>
+
+    </body>
+    </html>
+
