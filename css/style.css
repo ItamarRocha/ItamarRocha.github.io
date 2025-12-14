@@ -1156,6 +1156,13 @@ header.major h6 {
 			right: 1.25em;
 			top: 0;
 			vertical-align: middle;
+			/* Ensure inner list is centered vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
 		}
 
 			#header nav > ul {
@@ -1166,10 +1173,17 @@ header.major h6 {
 				display: -webkit-box;
 				display: -ms-flexbox;
 				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				    -ms-flex-direction: row;
+				        flex-direction: row;
+				    -ms-flex-wrap: nowrap;
+				        flex-wrap: nowrap;
 				-webkit-box-align: center;
 				    -ms-flex-align: center;
 				        align-items: center;
-				-gap: 2.5em; /* fallback handled by li margin */
+				gap: 2.5em; /* modern spacing */
+				column-gap: 2.5em; /* extra safety */
 			}
 
 				#header nav > ul > li {
@@ -1177,6 +1191,7 @@ header.major h6 {
 					display: inline-block; /* fallback */
 					margin-left: 2.5em;    /* spacing when gap unsupported */
 					padding-left: 0;
+					vertical-align: middle;
 				}
 
 					#header nav > ul > li a {
@@ -1383,6 +1398,10 @@ header.major h6 {
 /* Research page: base text size to 15px (paragraphs only) */
 .research-page #harvard-research p,
 .research-page #publications p { font-size: 15px; }
+/* Ensure inline links inside research paragraphs also render at 15px */
+.research-page #harvard-research p a { font-size: 15px; }
+/* Publications container may include text outside p; ensure 15px base */
+.research-page #publications { font-size: 15px; }
 
 /* Research page: h4 titles at 20px (requested list) */
 .research-page #harvard-research h4,
@@ -1394,6 +1413,13 @@ header.major h6 {
 #blog hr.title-divider { margin: 0.2em auto; }
 /* Bring the first divider even closer to the header */
 #blog hr.title-divider:first-of-type { margin-top: 0.1em; }
+
+/* Text page: mirror Blog spacing rules */
+#text.wrapper { padding-top: 0.2em; }
+#text .major.special { margin: 0; text-align: center; }
+#text .major.special h2 { display: inline-block; margin: 0 auto; }
+#text hr.title-divider { margin: 0.2em auto; }
+#text hr.title-divider:first-of-type { margin-top: 0.1em; }
 
 	#footer {
 		padding: 8em 0 6em 0;
