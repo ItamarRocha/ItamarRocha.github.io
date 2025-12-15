@@ -158,6 +158,12 @@
 	#home-research .major.special { margin: 0; }
 	#home-research .major.special h2 { margin: 0; }
 	#home-research hr.title-divider { margin: 0.3em auto; }
+	/* Home Research: bring paragraph closer to item title */
+	#home-research h4 { margin: 0 0 0.25em 0; }
+	#home-research h4 + p { margin-top: 0.15em !important; }
+	/* Home Research: tighten even more for research item preview */
+	#home-research .research-item h4 { margin: 0 0 0.1em 0; }
+	#home-research .research-item h4 + p { margin-top: 0 !important; }
 	/* News list layout with left-aligned dates */
 	.news-list {
 		display: -webkit-box;
@@ -260,6 +266,13 @@
 	body.landing .news-text {
 		overflow-wrap: anywhere;
 		word-break: break-word;
+	}
+	/* Make Fellowships and Awards (#research) use same width as News */
+	body.landing #research .container {
+		width: 75% !important;     /* match News' 75% container */
+		max-width: none !important;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	h4 {
@@ -1413,6 +1426,8 @@ header.major h6 {
 #blog hr.title-divider { margin: 0.2em auto; }
 /* Bring the first divider even closer to the header */
 #blog hr.title-divider:first-of-type { margin-top: 0.1em; }
+/* Blog page: ensure all item titles are 20px (not the page title) */
+#blog .blog-item h4 { font-size: 20px !important; }
 
 /* Text page: mirror Blog spacing rules */
 #text.wrapper { padding-top: 0.2em; }
@@ -1492,5 +1507,19 @@ header.major h6 {
   height: 100%;
   width: 4px;
   background: #d7e4ed;
+}
+
+/* === Global white background override === */
+body,
+.wrapper,
+.wrapper.style2,
+.wrapper.style3,
+#banner,
+#research,
+#featured,
+#blog.wrapper,
+#text.wrapper {
+  background-color: #fff !important;
+  background-image: none !important;
 }
 
