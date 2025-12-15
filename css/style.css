@@ -251,7 +251,7 @@
 	}
 	/* Ensure images never exceed content width */
 	body.landing .image.fit img {
-		max-width: 200%;
+		max-width: 100%;
 		height: auto;
 	}
 	/* Prevent long text (e.g., links) from overflowing the content width */
