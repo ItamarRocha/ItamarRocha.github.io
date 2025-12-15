@@ -1353,11 +1353,11 @@ header.major h6 {
 
 	/* Increase spacing between fixed header and first section */
 	#about {
-		padding-top: 8em;
+		padding-top: 10em;
 	}
 	/* Bring News section closer to the previous section */
 	#about {
-		padding-bottom: 1.5em;
+		padding-bottom: 1em;
 	}
 	#news {
 		padding-top: 1.5em;
