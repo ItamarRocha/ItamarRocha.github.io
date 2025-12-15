@@ -272,6 +272,27 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+	/* Add underline to section titles on home page */
+	body.landing #home-research .major.special h2,
+	body.landing #news .major.special h2,
+	body.landing #research .major.special h2,
+	body.landing [id="Extra-curricular and Volunteering"] .major.special h2 {
+		border-bottom: 1px solid #000;
+		padding-bottom: 0.0em;
+		margin-bottom: 1.5em;
+		display: inline-block;
+	}
+	/* Add underline to section titles on other pages */
+	#harvard-research .major.special h2,
+	#publications .major_publications.special h2,
+	#featured .major.special h2,
+	#blog .major.special h2,
+	#text .major.special h2 {
+		border-bottom: 1px solid #000;
+		padding-bottom: 0.0em;
+		margin-bottom: 1.5em;
+		display: inline-block;
+	}
 
 	h4 {
 		font-size: 1.1em;
