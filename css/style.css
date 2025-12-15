@@ -1425,7 +1425,10 @@ header.major h6 {
 .research-page #harvard-research h4 { margin: 0 0 0.25em 0; }
 .research-page #harvard-research p { margin: 0 0 0.8em 0; }
 .research-page #publications h4 { margin: 0 0 0.25em 0; }
-.research-page #publications p { margin: 0 0 0.8em 0; }
+.research-page #publications p { margin: 0 0 0.4em 0; }
+/* Reduce space between Publications title and first content */
+.research-page #publications .major_publications.special h2 { margin-bottom: 0.8em; }
+.research-page #publications div > br:first-child { display: none; }
 
 /* Research page: base text size to 15px (paragraphs only) */
 .research-page #harvard-research p,

@@ -76,50 +76,50 @@ title: blog
         <!-- BLOG -->
             <section id="blog" class="wrapper">
                 <div class="container" style="max-width: 1000px; line-height: 160%;">
-                    <header class="major special">
+                    <header class="major special" style="margin-bottom: 2.5em;">
                         <h2>blog</h2>
                     </header>
-                    <div class="blog-grid" style="display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5em; align-items: stretch;">
-                    <!-- Static entries moved to the first row -->
-                    <div class="blog-item" style="margin: 0; text-align: center; display:flex; flex-direction:column;">
-                        <div class="blog-title" style="display:flex; align-items:center; justify-content:center; min-height: 52px; text-align:center;">
-                            <h4 style="text-transform: uppercase; font-size:20px; margin:0;">When Agents Prefer Hacking To Failure: Evaluating Misalignment Under Pressure</h4>
-                        </div>
-                        <div class="blog-links" style="display:flex; justify-content:center; align-items:center; gap:0.6em; flex-wrap:wrap; min-height: 28px; margin: 0.2em 0;">
+                    <div class="blog-list">
+                    <!-- Static entries -->
+                    <div class="blog-item" style="margin-bottom: 2em;">
+                        <h4 style="text-transform: uppercase; font-size:20px; margin:0 0 0.5em 0;">When Agents Prefer Hacking To Failure: Evaluating Misalignment Under Pressure</h4>
+                        <div class="blog-links" style="display:flex; align-items:center; gap:0.6em; flex-wrap:wrap; margin: 0.5em 0;">
                             <a href="https://www.lesswrong.com/posts/AJANBeJb2p39su6F9/cs2881r-week-8-when-agents-prefer-hacking-to-failure" target="_blank" rel="noopener">LessWrong post</a>
                             <span>·</span>
                             <a href="https://github.com/ItamarRocha/scheming-exp8" target="_blank" rel="noopener">GitHub</a>
                             <span>·</span>
                             <a href="https://boazbk.github.io/mltheoryseminar/" target="_blank" rel="noopener">Course page</a>
                         </div>
-                        <p style="margin: 0.3em 0 0.4em 0; margin-top: auto;"><a href="https://www.lesswrong.com/posts/AJANBeJb2p39su6F9/cs2881r-week-8-when-agents-prefer-hacking-to-failure" class="button small" target="_blank" rel="noopener">Read more</a></p>
+                        <p style="margin: 0.5em 0;">An AI safety experiment analyzing evaluation hacking in language-model agents, combining controlled task design, behavioral analysis under pressure, and systematic testing across models. Read the write-up for experimental setup, findings, and implications for alignment. (Context: CS 2881r Seminar)</p>
+                        <p style="margin: 0.5em 0;"><a href="https://www.lesswrong.com/posts/AJANBeJb2p39su6F9/cs2881r-week-8-when-agents-prefer-hacking-to-failure" class="button small" target="_blank" rel="noopener">Read more</a></p>
                     </div>
-                    <div class="blog-item" style="margin: 0; text-align: center; display:flex; flex-direction:column;">
-                        <div class="blog-title" style="display:flex; align-items:center; justify-content:center; min-height: 52px; text-align:center;">
-                            <h4 style="text-transform: uppercase; font-size:20px; margin:0;">Capy Running Coach</h4>
-                        </div>
-                        <div class="blog-links" style="display:flex; justify-content:center; align-items:center; gap:0.6em; flex-wrap:wrap; min-height: 28px; margin: 0.2em 0;">
+                    
+                    <div class="blog-item" style="margin-bottom: 2em;">
+                        <h4 style="text-transform: uppercase; font-size:20px; margin:0 0 0.5em 0;">Capy Running Coach</h4>
+                        <div class="blog-links" style="display:flex; align-items:center; gap:0.6em; flex-wrap:wrap; margin: 0.5em 0;">
                             <a href="https://medium.com/institute-for-applied-computational-science/capy-running-coach-using-llms-rags-and-whatsapp-to-create-the-ideal-running-coach-f418300717bb" target="_blank" rel="noopener">Medium write-up</a>
                         </div>
-                        <p style="margin: 0.3em 0 0.4em 0; margin-top: auto;"><a href="https://medium.com/institute-for-applied-computational-science/capy-running-coach-using-llms-rags-and-whatsapp-to-create-the-ideal-running-coach-f418300717bb" class="button small" target="_blank" rel="noopener">Read more</a></p>
-                    </div>
-                    <!-- Divider for first row (spans both columns) -->
-                    <div class="row-divider" style="grid-column: 1 / -1;">
+                        <p style="margin: 0.5em 0;">An AI-powered running coach on WhatsApp, combining RAG, fine-tuned LLMs, vector search, and a GKE deployment. Read the write-up for system design and results.</p>
+                        <p style="margin: 0.5em 0;"><a href="https://medium.com/institute-for-applied-computational-science/capy-running-coach-using-llms-rags-and-whatsapp-to-create-the-ideal-running-coach-f418300717bb" class="button small" target="_blank" rel="noopener">Read more</a></p>
                     </div>
 
-                    <!-- Posts moved to the second row -->
+                    <!-- Posts from Jekyll -->
                     {% for post in site.posts %}
-                    <div class="blog-item" style="margin: 0; text-align: center; display:flex; flex-direction:column;">
-                        <h4 style="text-transform: uppercase; font-size:20px;">{{ post.title }}</h4>
-                        <p>{{ post.date | date: "%b %d, %Y" }}</p>
-                        <p>{{ post.excerpt | strip_html | strip_newlines }}</p>
-                        <p style="margin-top:auto;"><a href="{{ post.url }}" class="button small">Read more</a></p>
+                    <div class="blog-item" style="margin-bottom: 2em;">
+                        <h4 style="text-transform: uppercase; font-size:20px; margin:0 0 0.5em 0;">{{ post.title }}</h4>
+                        <p style="margin: 0.3em 0;">{{ post.date | date: "%b %d, %Y" }}</p>
+                        {% if post.title == "Helper Brasil Conta Comigo" %}
+                        <p style="margin: 0.3em 0;">Brasil Conta Comigo is a Governmental program that aims to increase the number of professionals in the fight against COVID-19. It intends to do so by recruiting students from the 5º and 6º years of Medical School along with last year students from the Nursing, physiotherapy, and farmaceutical school.</p>
+                        <p style="margin: 0.5em 0;"><a href="/ong.html" class="button small">Read more</a></p>
+                        {% elsif post.title == "Medway Student Allocation" %}
+                        <p style="margin: 0.3em 0;">Medway João Pessoa is an ENEM preparatory program known for its personalized advisory system, where students receive weekly guidance from experienced former ENEM students. This project focuses on improving the student–advisor allocation process by increasing compatibility and balancing workloads, with the goal of reducing advisor burnout and enhancing the experience for both students and advisors.</p>
+                        <p style="margin: 0.5em 0;"><a href="/medway.html" class="button small">Read more</a></p>
+                        {% else %}
+                        <p style="margin: 0.3em 0;">{{ post.excerpt | strip_html | strip_newlines }}</p>
+                        <p style="margin: 0.5em 0;"><a href="{{ post.url }}" class="button small">Read more</a></p>
+                        {% endif %}
                     </div>
                     {% endfor %}
-                    <!-- Divider for second row (spans both columns) -->
-                    <div class="row-divider" style="grid-column: 1 / -1;">
-                        <hr class="title-divider" style="margin: 0.8em auto;">
-                    </div>
                     </div>
                 </div>
             </section>
