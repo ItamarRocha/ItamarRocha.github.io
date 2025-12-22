@@ -8,19 +8,20 @@ title: blog
     Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-    <head>
-        <title>blog</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
-        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/skel.min.js"></script>
-        <script src="js/skel-layers.min.js"></script>
-        <script src="js/init.js"></script>
 
-        <!-- MathJax options -->
-        <script type="text/x-mathjax-config">
+<head>
+    <title>blog</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/skel-layers.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <!-- MathJax options -->
+    <script type="text/x-mathjax-config">
           MathJax.Hub.Config({
             tex2jax: {
               inlineMath: [ ['$','$'], ["\\(","\\)"] ],
@@ -30,121 +31,147 @@ title: blog
           });
         </script>
 
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174649418-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174649418-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-          gtag('config', 'UA-174649418-1');
-        </script>
+        gtag('config', 'UA-174649418-1');
+    </script>
 
-        <script type="text/javascript"
-            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-        </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 
-        <noscript>
-            <link rel="stylesheet" href="css/skel.css" />
-            <link rel="stylesheet" href="css/style.css" />
-            <link rel="stylesheet" href="css/style-xlarge.css" />
-        </noscript>
-    </head>
-    <body class="landing">
+    <noscript>
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-xlarge.css" />
+    </noscript>
+</head>
 
-        <!-- Header -->
-            <header id="header" class="alt">
-            <h1><strong><a href="https://www.harvard.edu/" target="_blank">Harvard</a></strong> CSE MS<br>
-          </h1>
-                <nav id="nav">
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/featured.html">EXTRA</a></li>
-                        <li><a href="/research.html">Research</a></li>
-                        <li><a href="/blog.html">blog</a></li>
-                        <li><a href="/docs/Itamar_resume.pdf" target="_blank">Resume</a></li>
-                    </ul>
-                </nav>
+<body class="landing">
+
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><strong><a href="https://www.harvard.edu/" target="_blank">Harvard</a></strong> CSE MS<br>
+        </h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/featured.html">Misc</a></li>
+                <li><a href="/research.html">Research</a></li>
+                <li><a href="/blog.html">blog</a></li>
+                <li><a href="/docs/Itamar_resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner (compact) -->
+    <section id="banner" style="padding: 1.5em 0 1em 0;">
+        <h2>Itamar Rocha Filho</h2>
+        <!-- <p>Machine Learning and Software Engineering</p> -->
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" style="padding-top: 0.6em;">
+        <div class="container" style="max-width: 1000px; line-height: 160%;">
+            <header class="major special" style="margin-bottom: 2.5em;">
+                <h2>blog</h2>
             </header>
-
-        <!-- Banner (compact) -->
-            <section id="banner" style="padding: 1.5em 0 1em 0;">
-                <h2>Itamar Rocha Filho</h2>
-                <!-- <p>Machine Learning and Software Engineering</p> -->
-            </section>
-
-        <!-- BLOG -->
-            <section id="blog" style="padding-top: 0.6em;">
-                <div class="container" style="max-width: 1000px; line-height: 160%;">
-                    <header class="major special" style="margin-bottom: 2.5em;">
-                        <h2>blog</h2>
-                    </header>
-                    <div class="blog-list">
-                    <!-- Static entries -->
-                    <div class="blog-item" style="margin-bottom: 2em;">
-                        <h4 style="text-transform: uppercase; font-size:20px; margin:0 0 0.5em 0; padding-top: 0.5em;">When Agents Prefer Hacking To Failure: Evaluating Misalignment Under Pressure</h4>
-                        <div class="blog-links" style="display:flex; align-items:center; gap:0.6em; flex-wrap:wrap; margin: 0.5em 0;">
-                            <a href="https://www.lesswrong.com/posts/AJANBeJb2p39su6F9/cs2881r-week-8-when-agents-prefer-hacking-to-failure" target="_blank" rel="noopener">LessWrong post</a>
-                            <span>·</span>
-                            <a href="https://github.com/ItamarRocha/scheming-exp8" target="_blank" rel="noopener">GitHub</a>
-                            <span>·</span>
-                            <a href="https://boazbk.github.io/mltheoryseminar/" target="_blank" rel="noopener">Course page</a>
-                        </div>
-                        <p style="margin: 0.5em 0; text-align: justify;">An AI safety experiment analyzing evaluation hacking in language-model agents, combining controlled task design, behavioral analysis under pressure, and systematic testing across models. Read the write-up for experimental setup, findings, and implications for alignment. (Context: CS 2881r Seminar)</p>
-                        <p style="margin: 0.5em 0; text-align: right;"><a href="https://www.lesswrong.com/posts/AJANBeJb2p39su6F9/cs2881r-week-8-when-agents-prefer-hacking-to-failure" style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;" target="_blank" rel="noopener">Read more →</a></p>
+            <div class="blog-list">
+                <!-- Static entries -->
+                <div class="blog-item" style="margin-bottom: 2em;">
+                    <h4 style="text-transform: uppercase; font-size:20px; margin:0 0 0.5em 0; padding-top: 0.5em;">When
+                        Agents Prefer Hacking To Failure: Evaluating Misalignment Under Pressure</h4>
+                    <div class="blog-links"
+                        style="display:flex; align-items:center; gap:0.6em; flex-wrap:wrap; margin: 0.5em 0;">
+                        <a href="https://www.lesswrong.com/posts/AJANBeJb2p39su6F9/cs2881r-week-8-when-agents-prefer-hacking-to-failure"
+                            target="_blank" rel="noopener">LessWrong post</a>
+                        <span>·</span>
+                        <a href="https://github.com/ItamarRocha/scheming-exp8" target="_blank" rel="noopener">GitHub</a>
+                        <span>·</span>
+                        <a href="https://boazbk.github.io/mltheoryseminar/" target="_blank" rel="noopener">Course
+                            page</a>
                     </div>
-                    
-                    
-                    <div class="blog-item" style="margin-bottom: 2em;">
-                        <h4 style="text-transform: uppercase; font-size:20px; margin:0 0 0.5em 0;">Capy Running Coach</h4>
-                        <div class="blog-links" style="display:flex; align-items:center; gap:0.6em; flex-wrap:wrap; margin: 0.5em 0;">
-                            <a href="https://medium.com/institute-for-applied-computational-science/capy-running-coach-using-llms-rags-and-whatsapp-to-create-the-ideal-running-coach-f418300717bb" target="_blank" rel="noopener">Medium write-up</a>
-                        </div>
-                        <p style="margin: 0.5em 0; text-align: justify;">An AI-powered running coach on WhatsApp, combining RAG, fine-tuned LLMs, vector search, and a GKE deployment. Read the write-up for system design and results.</p>
-                        <p style="margin: 0.5em 0; text-align: right;"><a href="https://medium.com/institute-for-applied-computational-science/capy-running-coach-using-llms-rags-and-whatsapp-to-create-the-ideal-running-coach-f418300717bb" style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;" target="_blank" rel="noopener">Read more →</a></p>
-                    </div>
-
-                    <!-- Posts from Jekyll -->
-                    {% for post in site.posts %}
-                    <div class="blog-item" style="margin-bottom: 2em;">
-                        <h4 style="text-transform: uppercase; font-size:20px; margin:0 0 0.5em 0;">{{ post.title }}</h4>
-                        <p style="margin: 0.3em 0;">{{ post.date | date: "%b %d, %Y" }}</p>
-                        {% if post.title == "Helper Brasil Conta Comigo" %}
-                        <p style="margin: 0.3em 0; text-align: justify;">Brasil Conta Comigo is a Governmental program that aims to increase the number of professionals in the fight against COVID-19. It intends to do so by recruiting students from the 5º and 6º years of Medical School along with last year students from the Nursing, physiotherapy, and farmaceutical school.</p>
-                        <p style="margin: 0.5em 0; text-align: right;"><a href="/helper-brasil.html" style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Read more →</a></p>
-                        {% elsif post.title == "Medway Student Allocation" %}
-                        <p style="margin: 0.3em 0; text-align: justify;">Medway João Pessoa is an ENEM preparatory program known for its personalized advisory system, where students receive weekly guidance from experienced former ENEM students. This project focuses on improving the student–advisor allocation process by increasing compatibility and balancing workloads, with the goal of reducing advisor burnout and enhancing the experience for both students and advisors.</p>
-                        <p style="margin: 0.5em 0; text-align: right;"><a href="/medway.html" style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Read more →</a></p>
-                        {% else %}
-                        <p style="margin: 0.3em 0; text-align: justify;">{{ post.excerpt | strip_html | strip_newlines }}</p>
-                        <p style="margin: 0.5em 0; text-align: right;"><a href="{{ post.url }}" style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Read more →</a></p>
-                        {% endif %}
-                    </div>
-                    {% endfor %}
-                    </div>
+                    <p style="margin: 0.5em 0; text-align: justify;">An AI safety experiment analyzing evaluation
+                        hacking in language-model agents, combining controlled task design, behavioral analysis under
+                        pressure, and systematic testing across models. Read the write-up for experimental setup,
+                        findings, and implications for alignment. (Context: CS 2881r Seminar)</p>
+                    <p style="margin: 0.5em 0; text-align: right;"><a
+                            href="https://www.lesswrong.com/posts/AJANBeJb2p39su6F9/cs2881r-week-8-when-agents-prefer-hacking-to-failure"
+                            style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;"
+                            target="_blank" rel="noopener">Read more →</a></p>
                 </div>
-            </section>
 
-        <!-- Footer -->
-            <footer id="footer">
-                <div class="container">
-                    <hr class="title-divider">
-                    <ul class="icons">
-                        <li><a href="mailto:itamardprf@gmail.com" class="icon fa-envelope"></a></li>
-                        <li><a href="https://instagram.com/itamarprf/" class="icon fa-instagram"></a></li>
-                        <li><a href="https://x.com/itaprf" class="icon fa-twitter" target="_blank" rel="noopener"></a></li>
-                        <li><a href="https://github.com/ItamarRocha" class="icon fa-github"></a></li>
-                        <li><a href="https://www.linkedin.com/in/itamarrocha" class="icon fa-linkedin"></a></li>
-                    </ul>
-                    <ul class="copyright">
-                        <li>Copyright &copy; Itamar Rocha Filho</li>
-                        <li> HTML5</li>
-                        <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
-                    </ul>
+
+                <div class="blog-item" style="margin-bottom: 2em;">
+                    <h4 style="text-transform: uppercase; font-size:20px; margin:0 0 0.5em 0;">Capy Running Coach</h4>
+                    <div class="blog-links"
+                        style="display:flex; align-items:center; gap:0.6em; flex-wrap:wrap; margin: 0.5em 0;">
+                        <a href="https://medium.com/institute-for-applied-computational-science/capy-running-coach-using-llms-rags-and-whatsapp-to-create-the-ideal-running-coach-f418300717bb"
+                            target="_blank" rel="noopener">Medium write-up</a>
+                    </div>
+                    <p style="margin: 0.5em 0; text-align: justify;">An AI-powered running coach on WhatsApp, combining
+                        RAG, fine-tuned LLMs, vector search, and a GKE deployment. Read the write-up for system design
+                        and results.</p>
+                    <p style="margin: 0.5em 0; text-align: right;"><a
+                            href="https://medium.com/institute-for-applied-computational-science/capy-running-coach-using-llms-rags-and-whatsapp-to-create-the-ideal-running-coach-f418300717bb"
+                            style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;"
+                            target="_blank" rel="noopener">Read more →</a></p>
                 </div>
-            </footer>
 
-    </body>
-    </html>
+                <!-- Posts from Jekyll -->
+                {% for post in site.posts %}
+                <div class="blog-item" style="margin-bottom: 2em;">
+                    <h4 style="text-transform: uppercase; font-size:20px; margin:0 0 0.5em 0;">{{ post.title }}</h4>
+                    <p style="margin: 0.3em 0;">{{ post.date | date: "%b %d, %Y" }}</p>
+                    {% if post.title == "Helper Brasil Conta Comigo" %}
+                    <p style="margin: 0.3em 0; text-align: justify;">Brasil Conta Comigo is a Governmental program that
+                        aims to increase the number of professionals in the fight against COVID-19. It intends to do so
+                        by recruiting students from the 5º and 6º years of Medical School along with last year students
+                        from the Nursing, physiotherapy, and farmaceutical school.</p>
+                    <p style="margin: 0.5em 0; text-align: right;"><a href="/helper-brasil.html"
+                            style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Read
+                            more →</a></p>
+                    {% elsif post.title == "Medway Student Allocation" %}
+                    <p style="margin: 0.3em 0; text-align: justify;">Medway João Pessoa is an ENEM preparatory program
+                        known for its personalized advisory system, where students receive weekly guidance from
+                        experienced former ENEM students. This project focuses on improving the student–advisor
+                        allocation process by increasing compatibility and balancing workloads, with the goal of
+                        reducing advisor burnout and enhancing the experience for both students and advisors.</p>
+                    <p style="margin: 0.5em 0; text-align: right;"><a href="/medway.html"
+                            style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Read
+                            more →</a></p>
+                    {% else %}
+                    <p style="margin: 0.3em 0; text-align: justify;">{{ post.excerpt | strip_html | strip_newlines }}
+                    </p>
+                    <p style="margin: 0.5em 0; text-align: right;"><a href="{{ post.url }}"
+                            style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Read
+                            more →</a></p>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <hr class="title-divider">
+            <ul class="icons">
+                <li><a href="mailto:itamardprf@gmail.com" class="icon fa-envelope"></a></li>
+                <li><a href="https://instagram.com/itamarprf/" class="icon fa-instagram"></a></li>
+                <li><a href="https://x.com/itaprf" class="icon fa-twitter" target="_blank" rel="noopener"></a></li>
+                <li><a href="https://github.com/ItamarRocha" class="icon fa-github"></a></li>
+                <li><a href="https://www.linkedin.com/in/itamarrocha" class="icon fa-linkedin"></a></li>
+            </ul>
 
+        </div>
+    </footer>
+
+</body>
+
+</html>
