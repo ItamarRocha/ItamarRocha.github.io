@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<!--
+    Spatial by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+    <head>
+        <title>Itamar Rocha Filho - Featured</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/skel.min.js"></script>
+        <script src="js/skel-layers.min.js"></script>
+        <script src="js/init.js"></script>
+
+        <!-- MathJax options -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174649418-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-174649418-1');
+        </script>
+
+        <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <noscript>
+            <link rel="stylesheet" href="css/skel.css" />
+            <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="css/style-xlarge.css" />
+        </noscript>
+    </head>
+    <body class="landing">
+
+        <!-- Header -->
+            <header id="header" class="alt">
+            <h1><strong><a href="https://www.harvard.edu/" target="_blank">Harvard</a></strong> CSE MS<br>
+          </h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/featured.html">EXTRA</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/blog.html">blog</a></li>
+                        <li><a href="/docs/Itamar_resume.pdf" target="_blank">Resume</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        <!-- Banner (compact) -->
+            <section id="banner" style="padding: 1.5em 0 1em 0;">
+                <h2>Itamar Rocha Filho</h2>
+                <!-- <p>Machine Learning and Software Engineering</p> -->
+            </section>
+
+        <!-- CONTENT -->
+            <section id="text" class="wrapper style2">
+                <div class="container" style="max-width: 1000px; line-height: 160%;">
+                    <style>
+                        /* Set all subsection titles to 20px on this page, excluding the main h2 */
+                        #text h3, 
+                        #text h4, 
+                        #text h5 { font-size: 20px; }
+                    </style>
+                    <header class="major special">
+                        <h2>Medway Student Allocation</h2>
+                    </header>
+                    <p style="color:#777; text-align: center;">08 Aug 2020</p>
+                    <p style="font-weight:700; font-size:20px;">What is medway?</p>
+                    <p><a href="https://www.instagram.com/medwayjp/" target="_blank" rel="noopener">Medway João Pessoa</a> is a preparatory course for ENEM (Brazilian SAT) and other tests (private universities). Medway has more than 200 students enrolled and counts with a system that’s different from its competitors. The difference relies on the way the company treats its students. Medway has several workers that have experience with ENEM and are responsible for advising the students in their studies and life. These employees are called assessor (some kind of Advisor/Organizer) who usually are students that have already passed the ENEM with high scores and are considered communicative.</p>
+
+                    <h4>Problem Overview</h4>
+                    <p>The problem here is that each advisor has normally 16 students with whom he must speak weekly, to know how they are doing on their studies, how were their grades on the mock tests, and how are they doing in general. However, these students are allocated without constraints. Therefore, some advisors get students that are not 100% compatible with them, and that need more attention during the week. These two problems are responsible for difficulting the job and for burning out some of the advisors.</p>
+                    <p>With this scenario in mind, my main objective in this work was trying to make things more balanced, so the students and the advisors can enjoy their roles in the best way possible while having a maximized total compatibility.</p>
+
+                    <h4>Tools Used</h4>
+                    <ul>
+                        <li><a href="https://www.ibm.com/analytics/cplex-optimizer" target="_blank" rel="noopener">CPLEX optimizer</a> (C++) from IBM as the mixed integer programming (MIP) solver.</li>
+                        <li>Python libraries such as Pandas and Numpy for the preprocessing phase.</li>
+                        <li>Google Forms to collect the data</li>
+                    </ul>
+
+                    <h4>Data Production</h4>
+                    <p>In view of this, I thought of crafting some sort of compatibility metric. With the help of my bosses and some of the college professors, I have made a Google forms with questions about different aspects of each student and each advisor’s life. Some of the information that was asked is listed below:</p>
+                    <ul>
+                        <li>Age</li>
+                        <li>Gender</li>
+                        <li>Degree that he/she intends to pursuit</li>
+                        <li>Organization Level</li>
+                        <li>Religion</li>
+                        <li>Extrovertion level</li>
+                        <li>Sensibility level</li>
+                        <li>Prefered subject</li>
+                        <li>Political views</li>
+                        <li>and many others…</li>
+                    </ul>
+                    <p>The main concern in asking so many questions from different life aspects was to make a good compatibility modeling.</p>
+                    <p>After deciding the questions, I have sent the Google Forms link for all the 250+ students and all the 18 advisors. After that I made another document where I asked each advisor to write how much time they used to spend with each of their students in the following scale (In minutes):</p>
+                    The main concern in asking so many questions from different life aspects was to make a good compatibility modeling.
+
+                    <p>After deciding the questions, I have sent the Google Forms link for all the 250+ students and all the 18 advisors. After that I made another document where I asked each advisor to write how much time they used to spend with each of their students in the following scale (In minutes):
+                </p>
+                    <center>
+                    <div>
+                        <table border = "1">
+                            <tr>
+                                <td>between 5</td>
+                                <td>between 5 and 10</td>
+                                <td>between 10 and 15</td>
+                                <td>between 15 and 20</td>
+                                <td>between 20 and 25</td>
+                                <td>25+</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                            </tr>
+                        </table>
+                    </div>
+                    </center>
+
+                    As in all project that depends on too many factors, although all the advisors had responded, I ended up with 170 student responses.
+                    <hr>
+
+                    <h4>Preprocessing</h4>
+                    <p>To compute the compatibility matrix, as the main objective of this project is to model the problem matematically and allocate the students, I chose a simple correlation function. The matrix consists of a i × j matrix, where i is the number of students and j is the number of advisors.</p>
+                    <p>For each question with equal responses it was computed +1 in the pair [student,advisor].</p>
+                    <p>Some of the questions were also used for constraints purposes. The preference for the advisor being from the same sex, for example, resulted in a negative M in the compatibility matrix, therefore eliminating that possibility. I also determined that each advisor could only receive students that were in a maximum one year older than them, adding new big negatives Ms in the matrix.</p>
+                    <p>We joined three data sources: the <a href="https://github.com/romulokps/apoiasus/raw/master/populacaoBR2.csv" target="_blank" rel="noopener">IBGE code table</a> and the <a href="https://github.com/kelvins/Municipios-Brasileiros/raw/main/csv/municipios.csv" target="_blank" rel="noopener">cities latitude/longitude table</a>, together with the ApoiaSUS website export, to compute approximate distances.</p>
+                    <p>The result was a table like:</p>
+                    <div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: center;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: center;
+    }
+
+    .dataframe thead th {
+        text-align: center;
+    }
+</style>
+<table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>A0</th>
+      <th>A1</th>
+      <th>A2</th>
+      <th>A3</th>
+      <th>A4</th>
+      <th>A5</th>
+      <th>A6</th>
+      <th>A7</th>
+      <th>A8</th>
+      <th>A9</th>
+      <th>A10</th>
+      <th>...</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>S0</th>
+      <td>11</td>
+      <td>-10000</td>
+      <td>-10000</td>
+      <td>15</td>
+      <td>-10000</td>
+      <td>13</td>
+      <td>-10000</td>
+      <td>13</td>
+      <td>-10000</td>
+      <td>16</td>
+      <td>-10000</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>S1</th>
+      <td>12</td>
+      <td>13</td>
+      <td>10</td>
+      <td>13</td>
+      <td>14</td>
+      <td>10</td>
+      <td>12</td>
+      <td>13</td>
+      <td>16</td>
+      <td>15</td>
+      <td>14</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>S2</th>
+      <td>14</td>
+      <td>-10000</td>
+      <td>-10000</td>
+      <td>18</td>
+      <td>-10000</td>
+      <td>13</td>
+      <td>-10000</td>
+      <td>16</td>
+      <td>-10000</td>
+      <td>20</td>
+      <td>-10000</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>S3</th>
+      <td>-10000</td>
+      <td>14</td>
+      <td>-10000</td>
+      <td>-10000</td>
+      <td>-10000</td>
+      <td>14</td>
+      <td>12</td>
+      <td>-10000</td>
+      <td>17</td>
+      <td>-10000</td>
+      <td>-10000</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>S4</th>
+      <td>12</td>
+      <td>16</td>
+      <td>11</td>
+      <td>16</td>
+      <td>13</td>
+      <td>13</td>
+      <td>13</td>
+      <td>15</td>
+      <td>15</td>
+      <td>13</td>
+      <td>10</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>S152</th>
+      <td>12</td>
+      <td>11</td>
+      <td>9</td>
+      <td>11</td>
+      <td>13</td>
+      <td>14</td>
+      <td>13</td>
+      <td>14</td>
+      <td>11</td>
+      <td>13</td>
+      <td>11</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>S153</th>
+      <td>11</td>
+      <td>10</td>
+      <td>13</td>
+      <td>10</td>
+      <td>11</td>
+      <td>13</td>
+      <td>12</td>
+      <td>10</td>
+      <td>11</td>
+      <td>12</td>
+      <td>11</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>S154</th>
+      <td>14</td>
+      <td>16</td>
+      <td>13</td>
+      <td>11</td>
+      <td>13</td>
+      <td>15</td>
+      <td>9</td>
+      <td>17</td>
+      <td>17</td>
+      <td>13</td>
+      <td>15</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>S155</th>
+      <td>10</td>
+      <td>-10000</td>
+      <td>-10000</td>
+      <td>12</td>
+      <td>-10000</td>
+      <td>11</td>
+      <td>-10000</td>
+      <td>13</td>
+      <td>-10000</td>
+      <td>13</td>
+      <td>-10000</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>S156</th>
+      <td>14</td>
+      <td>11</td>
+      <td>12</td>
+      <td>10</td>
+      <td>10</td>
+      <td>12</td>
+      <td>8</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>12</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
+<p>157 rows × 15 columns</p>
+</div>
+                    <blockquote>The names and the preprocessing scripts were omitted since the information gathered in this project is private and was not authorized to be published.</blockquote>
+                    <hr class="title-divider">
+                    <h4>Modeling</h4>
+                    <h5>Sets</h5>
+                    <ul>
+                        <li>S → Students</li>
+                        <li>A → Advisors</li>
+                    </ul>
+                    <h5>Data</h5>
+                    <ul>
+                        <li>\( c_{i,j} \) — Compatibility of student \(i\) and advisor \(j\)</li>
+                        <li>\( w_i \) — Weight of time spent by student \(i\)</li>
+                        <li>\( f_j \) — Fixed students for advisor \(j\)</li>
+                        <li>\( t_j \) — Fixed time for advisor \(j\)</li>
+                    </ul>
+                    <p>The fixed time and fixed students were used to handle missing survey responses. Students who didn’t respond remained with their current advisors, so each advisor starts with \( f_j \) students and \( t_j \) time.</p>
+                    <h5>Constants</h5>
+                    <ul>
+                        <li>\( N \) — Average number of students per advisor</li>
+                        <li>\( T \) — Average weekly time per advisor</li>
+                    </ul>
+                    <h5>Decision variables</h5>
+                    <p>\( x_{i,j} \in \{0,1\} \), indicating whether student \(i\) is assigned to advisor \(j\).</p>
+                    <h5>Objective function</h5>
+                    <p>Maximize total compatibility:</p>
+                    <p>\[ \sum_{i \in S} \sum_{j \in A} c_{i,j} \, x_{i,j} \]</p>
+                    <h5>Constraints</h5>
+                    <ol>
+                        <li>Each student must have exactly one advisor:
+                            <div>\[ \sum_{j \in A} x_{i,j} = 1 \quad \forall i \in S \]</div>
+                        </li>
+                        <li>Bound students per advisor (use band \(\{N-1, N, N+1\}\) if needed):
+                            <div>\[ f_j + \sum_{i \in S} x_{i,j} \approx N \quad \forall j \in A \]</div>
+                        </li>
+                        <li>Limit advisor time (or bound within an interval):
+                            <div>\[ t_j + \sum_{i \in S} w_i \, x_{i,j} = T \quad \forall j \in A \]</div>
+                        </li>
+                    </ol>
+                    <hr class="title-divider">
+                    <h3>Results and Comparisons</h3>
+                    <p>Using the model that I have made led to an optimal solution to the problem. Apart from having the maximum compatibility possible (using the metric previously presented), the problem also tackled the imbalances in the previous allocation.</p>
+                    <p>The average time is 60 (in the scale of time mentioned in data production). However, before using the model, the standard deviation of each advisor's time was 11.65, which was reduced to 0.8. In addition, the number of students for each advisor's standard deviation was 1.18 and ended up being 0.5.</p>
+                    <p>In summary, the modeling was able to distribute the students to maximizing the compatibility and balancing the job for each advisor, since they all get paid the same.</p>
+                    <blockquote>The optimization code can be found <a href="https://github.com/ItamarRocha/Operations-Research/tree/master/projects/medway" target="_blank" rel="noopener">here</a></blockquote>
+                    <hr class="title-divider">
+                    <h3>Improvements and Future Works</h3>
+                    <p><strong>Improvements:</strong></p>
+                    <ul>
+                        <li>Gather the data from all students.</li>
+                        <li>Test other compatibility metrics.</li>
+                    </ul>
+                    <p><strong>Future works:</strong></p>
+                    <ul>
+                        <li>Develop a software to do the allocation automatically.</li>
+                        <li>Create a prediction of the time spent by the new students based on interview informations.</li>
+                    </ul>
+                    <hr class="title-divider">
+                    <h3>Questions?</h3>
+                    <p>You can reach me out on any social media at the end of the page.</p>
+                </div>
+            </section>
+
+        <!-- Footer -->
+            <footer id="footer">
+                <div class="container">
+                    <hr class="title-divider">
+                    <ul class="icons">
+                        <li><a href="mailto:itamardprf@gmail.com" class="icon fa-envelope"></a></li>
+                        <li><a href="https://instagram.com/itamarprf/" class="icon fa-instagram"></a></li>
+                        <li><a href="https://x.com/itaprf" class="icon fa-twitter" target="_blank" rel="noopener"></a></li>
+                        <li><a href="https://github.com/ItamarRocha" class="icon fa-github"></a></li>
+                        <li><a href="https://www.linkedin.com/in/itamarrocha" class="icon fa-linkedin"></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>Copyright &copy; Itamar Rocha Filho</li>
+                        <li> HTML5</li>
+                        <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+                    </ul>
+                </div>
+            </footer>
+
+    </body>
+    </html>
+

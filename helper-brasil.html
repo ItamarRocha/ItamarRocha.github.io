@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!--
+    Spatial by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+    <head>
+        <title>Itamar Rocha Filho - Featured</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/skel.min.js"></script>
+        <script src="js/skel-layers.min.js"></script>
+        <script src="js/init.js"></script>
+
+        <!-- MathJax options -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+            tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+              processEscapes: true
+            }
+          });
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174649418-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-174649418-1');
+        </script>
+
+        <script type="text/javascript"
+            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+
+        <noscript>
+            <link rel="stylesheet" href="css/skel.css" />
+            <link rel="stylesheet" href="css/style.css" />
+            <link rel="stylesheet" href="css/style-xlarge.css" />
+        </noscript>
+    </head>
+    <body class="landing">
+
+        <!-- Header -->
+            <header id="header" class="alt">
+            <h1><strong><a href="https://www.harvard.edu/" target="_blank">Harvard</a></strong> CSE MS<br>
+          </h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/featured.html">EXTRA</a></li>
+                        <li><a href="/research.html">Research</a></li>
+                        <li><a href="/blog.html">blog</a></li>
+                        <li><a href="/docs/Itamar_resume.pdf" target="_blank">Resume</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+        <!-- Banner (compact) -->
+            <section id="banner" style="padding: 1.5em 0 1em 0;">
+                <h2>Itamar Rocha Filho</h2>
+            </section>
+
+        <!-- CONTENT -->
+            <section id="text" class="wrapper style2">
+                <div class="container" style="max-width: 1000px; line-height: 160%;">
+                    <style>
+                        #text h3, #text h4, #text h5 { font-size: 20px; }
+                    </style>
+                    <header class="major special">
+                        <h2>Helper Brasil Conta Comigo</h2>
+                    </header>
+
+                    <p style="color:#777; text-align: center;">29 Oct 2020</p>
+                    <p style="font-weight:700; font-size:20px;">What is Brasil Conta Comigo?</p>
+
+                    <center>
+                        <div>
+                            <img src="/images/apoiasus/BCM.jpeg" alt="Helper BCM" style="max-width:550px; width:100%; height:auto;">
+                        </div>
+                    </center>
+
+                    <p><a href="https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria/2020/04/201co-brasil-conta-comigo201d-habilita-estudantes-da-saude-para-atuar-no-combate-ao-coronavirus" target="_blank" rel="noopener">Brasil Conta Comigo</a> is a Governmental program that aims to increase the number of professionals in the fight against COVID-19. It intends to do so by recruiting students from the 5º and 6º years of Medical School along with last year students from the Nursing, physiotherapy, and farmaceutical school.</p>
+
+                    <hr class="title-divider">
+                    <h4>Problem Overview</h4>
+                    <p>The main spotted problem is the way the data is displayed. There is no filter. The places with vacancies are shown in a table at <a href="https://sgtes.unasus.gov.br/apoiasus/login/listadevagas.asp" target="_blank" rel="noopener">ApoiaSUS</a>, followed by each profession slot number. Even though the data is grouped by states, there are more than 5570 cities in Brazil. With that said, finding a city near yours and that fulfills your profession type can be a difficult task.</p>
+
+                    <hr class="title-divider">
+                    <h4>Tools Used</h4>
+                    <p>The project was done entirely in Python and deployed with Heroku. The libraries used in Python were:</p>
+                    <ul>
+                        <li>Pandas</li>
+                        <li>Numpy</li>
+                        <li>Streamlit</li>
+                        <li>Unidecode</li>
+                        <li>geopy</li>
+                    </ul>
+
+                    <hr class="title-divider">
+                    <h4>Preprocessing</h4>
+                    <p>The work consisted of Joining three tables, one table that contains the data in ApoiaSUS website, the <a href="https://github.com/romulokps/apoiasus/raw/master/populacaoBR2.csv" target="_blank" rel="noopener">data with the IBGE code</a> and the <a href="https://github.com/kelvins/Municipios-Brasileiros/raw/main/csv/municipios.csv" target="_blank" rel="noopener">data that stores the latitude and the longitude of each city</a>, so we could use them to calculate an approximate distance.</p>
+                    <p>We did the string preprocessing in each city and state name, removing accents and other characters that could lead to a more complex search system, and we lowered all the strings in the table that we use as search keys.</p>
+
+                    <hr class="title-divider">
+                    <h4>Web App</h4>
+                    <p>The entire application was done using streamlit. We used it to generate the data with the filter sidebar, along with the map visualization. To adjust the data shown with the filter we used pandas dataframe .loc methods and to calculate the distance we used geopy.distance.</p>
+                    <p>The code can be found at <a href="https://github.com/romulokps/apoiasus" target="_blank" rel="noopener">the GitHub repository</a>.</p>
+
+                    <hr class="title-divider">
+                    <h4>Results</h4>
+                    <p>The project is no longer working, since the govern has ended the program. You can see a preview of how it was by watching the video below.</p>
+                    <p><a href="http://www.youtube.com/watch?v=IoWE-PGk1Q0" target="_blank" rel="noopener"><img src="http://img.youtube.com/vi/IoWE-PGk1Q0/0.jpg" alt="Helper ApoiaSus" style="max-width:100%; height:auto;"></a></p>
+
+                    <hr class="title-divider">
+                    <h4>Questions?</h4>
+                    <p>Thank you for your time!<br>You can reach me out on any social media at the end of the page.</p>
+                </div>
+            </section>
+
+        <!-- Footer -->
+            <footer id="footer">
+                <div class="container">
+                    <hr class="title-divider">
+                    <ul class="icons">
+                        <li><a href="mailto:itamardprf@gmail.com" class="icon fa-envelope"></a></li>
+                        <li><a href="https://instagram.com/itamarprf/" class="icon fa-instagram"></a></li>
+                        <li><a href="https://x.com/itaprf" class="icon fa-twitter" target="_blank" rel="noopener"></a></li>
+                        <li><a href="https://github.com/ItamarRocha" class="icon fa-github"></a></li>
+                        <li><a href="https://www.linkedin.com/in/itamarrocha" class="icon fa-linkedin"></a></li>
+                    </ul>
+                    <ul class="copyright">
+                        <li>Copyright &copy; Itamar Rocha Filho</li>
+                        <li> HTML5</li>
+                        <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+                    </ul>
+                </div>
+            </footer>
+
+    </body>
+    </html>
