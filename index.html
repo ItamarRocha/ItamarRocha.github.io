@@ -9,7 +9,7 @@
 <head>
 	<title>Itamar Rocha Filho - Homepage</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="" />
+	<meta name="description" content="Itamar Rocha Filho — Harvard CSE MS. Research in reliable LLM post-training (RLVR), safety, and scalable ML systems." />
 	<meta name="keywords" content="" />
 	<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 	<script src="js/jquery.min.js"></script>
@@ -49,7 +49,7 @@
           ga('send', 'pageview');
         </script> -->
 
-	<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 	</script>
 
 	<noscript>
@@ -68,9 +68,9 @@
 		<nav id="nav">
 			<ul>
 				<li><a href="/">Home</a></li>
- 				<li><a href="/featured.html">EXTRA</a></li>
+ 				<li><a href="/featured.html">Featured</a></li>
 				<li><a href="/research.html">Research</a></li>
-				<li><a href="/blog.html">blog</a></li>
+				<li><a href="/blog.html">Blog</a></li>
 				<li><a href="/docs/Itamar_resume.pdf" target="_blank">Resume</a></li>
 			</ul>
 		</nav>
@@ -90,22 +90,27 @@
 				<div class="6u$ 12u$(medium) about-text">
 					<h2 class="name-title">Itamar Rocha Filho</h2>
 					<p>
-						Hey! I am a second-year Computational Science and Engineering master's student at Harvard University, working in Reinforcement Learning with Verifiable Rewards (RLVR), advised by Sham Kakade. I completed my undergraduate degree in Computer Engineering at the Federal University of Paraíba (UFPB) in Brazil. At Harvard, I’m a Teaching Fellow for AC215 (MLOps & LLMOps) and a Machine Learning Researcher at the Kempner Institute, focusing on Reinforcement Learning with Verifiable Rewards (RLVR). Previously, I interned twice at Google (YouTube and Search) and twice at Meta (AI for AR and Ads).
+						I’m a second-year Computational Science and Engineering (CSE) master’s student at Harvard University. I do research on reliable LLM post-training—especially Reinforcement Learning with Verifiable Rewards (RLVR)—advised by Sham Kakade, and I’m a Machine Learning Researcher at the Kempner Institute. I also teach AC215 (MLOps & LLMOps) as a Teaching Fellow.
 					</p>
 					<p>
-						I like running, playing football (the one and only ⚽), surfing, and reading in my spare time.
+						Before Harvard, I studied Computer Engineering at the Federal University of Paraíba (UFPB), and interned at Google (YouTube, Search) and Meta (AI for AR, Ads).
 					</p>
 					<p>
-						You can get in touch with me at
+						I like running, playing football, surfing, and reading.
+					</p>
+					<p>
+						You can reach me at
 						<a href="mailto:itamardprf@gmail.com">itamardprf@gmail.com</a>,
 						visit my <a href="https://github.com/ItamarRocha" target="_blank" rel="noopener">GitHub</a>,
 						or connect with me on <a href="https://www.linkedin.com/in/itamarrocha" target="_blank"
 							rel="noopener">LinkedIn</a>.
-						You can learn more about my career on <a href="https://www.linkedin.com/in/itamarrocha"
-							target="_blank" rel="noopener">LinkedIn</a>
-						and in my <a href="/docs/Itamar_resume.pdf" target="_blank" rel="noopener">resume (which may be
-							outdated)</a>.
+						You can also download my <a href="/docs/Itamar_resume.pdf" target="_blank" rel="noopener">resume (PDF)</a>.
 					</p>
+					<div class="link-row" style="margin-top: 0.7em;">
+						<a href="/research.html">Research</a><span class="dot">·</span>
+						<a href="/blog.html">Writing</a><span class="dot">·</span>
+						<a href="/featured.html">Featured</a>
+					</div>
 				</div>
 			</div>
 			<div class="about-continue">
@@ -125,13 +130,27 @@
 						<header class="major special">
 							<h2>Research</h2>
 						</header>
-						<div class="research-item">
-							<h4><a href="https://drive.google.com/file/d/16McClLBCSU7pgTV-NyVssfjJYrDlq8hF/view" target="_blank" rel="noopener">Evolutionary Alignment</a></h4>
-							<p style="text-align: justify;">
-								The paper presents an in-depth analysis and comparison of Evolution Strategies (ES) and gradient-based Reinforcement Learning methods, such as GRPO, for fine-tuning large language models. The main goal is to demonstrate that ES can serve as a scalable and sample-efficient alternative for performance optimization and safety alignment, achieving competitive rewards while reducing reward hacking and enabling more robust, context-aware alignment outcomes. <a href="https://drive.google.com/file/d/16McClLBCSU7pgTV-NyVssfjJYrDlq8hF/view" target="_blank" rel="noopener">Read the paper</a>
+						<div class="content-card">
+							<h4><a href="/research.html" rel="noopener">Evolutionary Alignment</a></h4>
+							<div class="pill-row">
+								<span class="pill">LLM post-training</span>
+								<span class="pill">Exploration</span>
+								<span class="pill">Alignment</span>
+							</div>
+							<p style="text-align: justify; margin-bottom: 0.6em;">
+								A study of Evolution Strategies as an exploration-based alternative to gradient RL for fine-tuning LLMs—analyzing when ES matches RL baselines and when it avoids reward-hacking failure modes.
 							</p>
-					</div>
-					<p style="text-align: right;"><a href="/research.html" style="color: #888; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Learn more →</a></p>
+							<div class="link-row">
+								<a href="https://drive.google.com/file/d/16McClLBCSU7pgTV-NyVssfjJYrDlq8hF/view" target="_blank" rel="noopener">Paper</a>
+								<span class="dot">·</span>
+								<a href="https://drive.google.com/file/d/1AVhVXDFJVOwP7Y9O8PhK8R-qSksdB9eM/view" target="_blank" rel="noopener">Presentation</a>
+								<span class="dot">·</span>
+								<a href="https://github.com/ItamarRocha/evolutionary-alignment" target="_blank" rel="noopener">GitHub</a>
+							</div>
+							<div class="card-cta">
+								<a href="/research.html">Learn more →</a>
+							</div>
+						</div>
 				</div>
 			</section>
 
