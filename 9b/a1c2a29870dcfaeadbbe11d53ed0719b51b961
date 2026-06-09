@@ -1,0 +1,27 @@
+index.html
+  s_d53cd6be93b0d0::t_a430190ee42b2c 13
+  s_d53cd6be93b0d0::t_ea3824a80f8188 250
+  s_d53cd6be93b0d0::t_24f0945b20a6fd 95-97,100-104
+  s_d53cd6be93b0d0::t_b3d85f2730c116 196-202
+  s_d53cd6be93b0d0::t_2b62a82b5024fa 140-159
+research.html
+  s_d53cd6be93b0d0::t_d129a79f5f3717 199
+  s_d53cd6be93b0d0::t_6b9fdf81496b9b 141-143
+  s_d53cd6be93b0d0::t_d96beb79d5b850 174-195
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "9ba1c2a29870dcfaeadbbe11d53ed0719b51b961",
+  "prompts": {},
+  "sessions": {
+    "s_d53cd6be93b0d0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d546576b-8d76-4aab-8d62-58d1bac510e1",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Itamar Rocha Filho <itamardprf@gmail.com>"
+    }
+  }
+}
