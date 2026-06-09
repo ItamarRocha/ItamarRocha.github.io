@@ -138,9 +138,9 @@
             <p style="text-align: justify;">
                 As a Machine Learning Researcher at the Kempner Institute at Harvard University, I focus on RLVR,
                 exploring reward specification and verification to build more robust and efficient learning systems
-                along with understanding how they work in practice. We currently have one paper under review at ICLR'26
-                on parameter efficient Reinforcement Learning and another ongoing research on the ceilling effect of
-                coverage on RL for LLMs.
+                along with understanding how they work in practice. This work led to a paper accepted at ICLR 2026
+                on parameter-efficient Reinforcement Learning (Prefix Optimization), with another ongoing project on the
+                ceiling effect of coverage in RL for LLMs.
             </p>
             <div class="link-row">
                 [<a href="https://huggingface.co/itamarf/collections" target="_blank" rel="noopener">HuggingFace Model
@@ -171,10 +171,32 @@
                 <h2>Publications</h2>
                 <!-- <p>Relevant</p> -->
             </header>
+
+            <p id="PrefixRL">
+            <h4>
+                Parameter-Efficient Reinforcement Learning using Prefix Optimization
+                <a href="https://openreview.net/forum?id=SLhLUdlaqc"><span class="image right"><img
+                            src="images/link-to-here.png" title="Link to this paper" alt="Link to this paper"
+                            style="max-width: 15px"></span></a>
+            </h4>
+            <span style="text-align: justify; display: block;">Reinforcement Learning with Verifiable Rewards (RLVR)
+                is a leading approach for tuning language models on mathematical reasoning, but it is unclear whether
+                its gains stem from genuine reasoning improvements or from steering the model toward answer formats
+                already present in the reference distribution. We optimize only the first <i>k</i> tokens of each
+                solution—via a lightweight RL-tuned adapter (Prefix-RL) or a prefix-clustering method—and recover much
+                of full RL’s accuracy gains at a tiny fraction of the compute, suggesting that part of RL’s benefit is
+                simply upweighting a preferable solution strategy.</span>
+            <br><br>
+            <strong>Itamar Rocha Filho</strong>, Rosie Zhao, Sham M. Kakade, Eran Malach, Samy Jelassi
+            <br>
+            <i>ICLR 2026</i><br>
+            [<a href="https://openreview.net/forum?id=SLhLUdlaqc" target="_blank" rel="noopener">OpenReview</a>]
+            </p>
+            <br>
             <div>
                 <br>
                 </p>
-                <p style="text-align: justify;">The research conducted here was in the academic environment of the <a
+                <p style="text-align: justify;">My earlier published research was conducted in the academic environment of the <a
                         href="https://www.ufpb.br/" target="_blank">Federal University of Paraíba</a> (UFPB). It is
                     important
                     to point out that three of my internships involved working with research closely to industry
